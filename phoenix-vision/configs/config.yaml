@@ -1,0 +1,6 @@
+glide_ratio: 9.5
+reserve_altitude: 500
+failure_types:
+  - EngineFailure
+  - FuelLeak
+  - ElectricalFailure

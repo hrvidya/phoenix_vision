@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7456232a53e41f76e320ebd77491be3a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    <script>
+        // Global variables
+        var currentMarker = null;
+        var currentCircle = null;
+        var coordinatesSidebar = document.getElementById('coordinates-sidebar');
+        
+        // Initialize sidebar
+        function initSidebar() {
+            var sidebar = document.createElement('div');
+            sidebar.id = 'coordinates-sidebar';
+            sidebar.style.cssText = `
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                width: 300px;
+                background: white;
+                border: 2px solid #007bff;
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                z-index: 1000;
+                font-family: Arial, sans-serif;
+                max-height: 400px;
+                overflow-y: auto;
+            `;
+            
+            sidebar.innerHTML = `
+                <h3 style="color: #dc3545; margin: 0 0 15px 0; text-align: center;">🎯 SELECTED COORDINATES</h3>
+                <div id="coordinates-list" style="font-size: 12px;">
+                    <p style="color: #666; text-align: center; margin: 0;">No markers placed yet</p>
+                </div>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee;">
+                    <button onclick="clearAllMarkers()" style="width: 100%; padding: 8px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        🗑️ Clear All Markers
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(sidebar);
+            coordinatesSidebar = sidebar;
+        }
+        
+        // Add marker on click
+        function addMarker(e) {
+            // Remove previous marker
+            if (currentMarker) {
+                map.removeLayer(currentMarker);
+            }
+            
+            // Create new marker
+            currentMarker = L.marker(e.latlng, {
+                draggable: true,
+                icon: L.icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                })
+            }).addTo(map);
+            
+            // Add circle around marker
+            if (currentCircle) {
+                map.removeLayer(currentCircle);
+            }
+            currentCircle = L.circle(e.latlng, {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.2,
+                radius: 5000
+            }).addTo(map);
+            
+            // Update coordinates in sidebar
+            updateCoordinatesSidebar(e.latlng);
+            
+            // Add popup
+            currentMarker.bindPopup(`
+                <div style="text-align: center; font-family: Arial;">
+                    <h4>🎯 SELECTED LOCATION</h4>
+                    <p><b>Coordinates:</b></p>
+                    <p style="font-family: monospace; background: #f8f9fa; padding: 5px; border-radius: 3px;">
+                        ${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}
+                    </p>
+                    <p style="color: #666; font-size: 12px; margin: 10px 0 0 0;">
+                        Drag marker to adjust position
+                    </p>
+                </div>
+            `).openPopup();
+            
+            // Make marker draggable
+            currentMarker.on('dragend', function(event) {
+                var marker = event.target;
+                var position = marker.getLatLng();
+                
+                // Update circle position
+                if (currentCircle) {
+                    currentCircle.setLatLng(position);
+                }
+                
+                // Update sidebar
+                updateCoordinatesSidebar(position);
+                
+                marker.getPopup().setContent(`
+                    <div style="text-align: center; font-family: Arial;">
+                        <h4>🎯 MOVED LOCATION</h4>
+                        <p><b>New Coordinates:</b></p>
+                        <p style="font-family: monospace; background: #f8f9fa; padding: 5px; border-radius: 3px;">
+                            ${position.lat.toFixed(6)}, ${position.lng.toFixed(6)}
+                        </p>
+                    </div>
+                `).openPopup();
+            });
+        }
+        
+        // Update coordinates sidebar
+        function updateCoordinatesSidebar(latlng) {
+            var coordinatesList = document.getElementById('coordinates-list');
+            var timestamp = new Date().toLocaleTimeString();
+            
+            coordinatesList.innerHTML = `
+                <div style="background: #d4edda; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <p style="margin: 0 0 5px 0; font-weight: bold;">📍 Current Selection:</p>
+                    <p style="font-family: monospace; background: white; padding: 8px; border-radius: 3px; margin: 0; font-size: 14px;">
+                        ${latlng.lat.toFixed(6)}, ${latlng.lng.toFixed(6)}
+                    </p>
+                    <p style="margin: 5px 0 0 0; font-size: 11px; color: #666;">
+                        Selected at: ${timestamp}
+                    </p>
+                </div>
+                <div style="margin-top: 15px;">
+                    <p style="margin: 0 0 8px 0; font-weight: bold;">📝 Instructions:</p>
+                    <ol style="margin: 0; padding-left: 15px; font-size: 11px;">
+                        <li>Click anywhere to place marker</li>
+                        <li>Drag marker to adjust</li>
+                        <li>Copy coordinates below</li>
+                        <li>Return to terminal</li>
+                        <li>Press [E] for AI analysis</li>
+                    </ol>
+                </div>
+            `;
+        }
+        
+        // Clear all markers
+        function clearAllMarkers() {
+            if (currentMarker) {
+                map.removeLayer(currentMarker);
+                currentMarker = null;
+            }
+            if (currentCircle) {
+                map.removeLayer(currentCircle);
+                currentCircle = null;
+            }
+            document.getElementById('coordinates-list').innerHTML = `
+                <p style="color: #666; text-align: center; margin: 0;">No markers placed yet</p>
+            `;
+        }
+        
+        // Initialize when map loads
+        map.whenReady(function() {
+            initSidebar();
+        });
+        
+        // Add click event
+        map.on('click', addMarker);
+        </script>
+    
+        <style>
+            .leaflet-popup-content {
+                font-family: Arial, sans-serif;
+            }
+            #coordinates-sidebar h3 {
+                color: #dc3545;
+                margin: 0 0 15px 0;
+                text-align: center;
+            }
+        </style>
+        
+    
+            <div class="folium-map" id="map_7456232a53e41f76e320ebd77491be3a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7456232a53e41f76e320ebd77491be3a = L.map(
+                "map_7456232a53e41f76e320ebd77491be3a",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ad8283f957db8c31ce75d6dbed5818fc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ad8283f957db8c31ce75d6dbed5818fc.addTo(map_7456232a53e41f76e320ebd77491be3a);
+        
+</script>
+</html>

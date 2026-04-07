@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_162911b34b0576ac328e77ea8239bdf3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_162911b34b0576ac328e77ea8239bdf3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_162911b34b0576ac328e77ea8239bdf3 = L.map(
+                "map_162911b34b0576ac328e77ea8239bdf3",
+                {
+                    center: [12.458, 75.959],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1dc4e62e9547a55c1a94fc183e63779c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1dc4e62e9547a55c1a94fc183e63779c.addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var marker_e4bf805485ac7c3bfde8aca01f86afc6 = L.marker(
+                [12.458, 75.959],
+                {
+}
+            ).addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var icon_b65561685e8c84b891b65bbce8191614 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a029c132dbb1e2d8a485f297ea8efc1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d31b647e6edba2ce035b7b223a78215b = $(`<div id="html_d31b647e6edba2ce035b7b223a78215b" style="width: 100.0%; height: 100.0%;">🛩️ YOUR AIRCRAFT - EMERGENCY LANDING</div>`)[0];
+                popup_a029c132dbb1e2d8a485f297ea8efc1b.setContent(html_d31b647e6edba2ce035b7b223a78215b);
+            
+        
+
+        marker_e4bf805485ac7c3bfde8aca01f86afc6.bindPopup(popup_a029c132dbb1e2d8a485f297ea8efc1b)
+        ;
+
+        
+    
+    
+                marker_e4bf805485ac7c3bfde8aca01f86afc6.setIcon(icon_b65561685e8c84b891b65bbce8191614);
+            
+    
+            var marker_3bffdd84c73823c1fc1fa25b67475def = L.marker(
+                [12.63818018018018, 75.959],
+                {
+}
+            ).addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var icon_6855a4ea355d284d96c187a23affbd56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "times-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2924009d0f149475734cbd31a492c0aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1635a75d1f421530364b3b840b95a8d9 = $(`<div id="html_1635a75d1f421530364b3b840b95a8d9" style="width: 100.0%; height: 100.0%;">             <b>North Zone</b><br>             🎯 <b>AI Safety Score: 0.0%</b><br>             📍 Type: land<br>             📏 Distance: 20.0 km<br>             📡 Data: Real-time             </div>`)[0];
+                popup_2924009d0f149475734cbd31a492c0aa.setContent(html_1635a75d1f421530364b3b840b95a8d9);
+            
+        
+
+        marker_3bffdd84c73823c1fc1fa25b67475def.bindPopup(popup_2924009d0f149475734cbd31a492c0aa)
+        ;
+
+        
+    
+    
+            marker_3bffdd84c73823c1fc1fa25b67475def.bindTooltip(
+                `<div>
+                     0.0% - North Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3bffdd84c73823c1fc1fa25b67475def.setIcon(icon_6855a4ea355d284d96c187a23affbd56);
+            
+    
+            var marker_41572862f282099ebe776c699bdff8cd = L.marker(
+                [12.322864864864865, 75.959],
+                {
+}
+            ).addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var icon_20de24ab8ee985a4d71bec867faee236 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "times-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bab630d8100027f66d6fe292cb38582a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_794236a355e7beddbf2be0f20229ef56 = $(`<div id="html_794236a355e7beddbf2be0f20229ef56" style="width: 100.0%; height: 100.0%;">             <b>South Zone</b><br>             🎯 <b>AI Safety Score: 0.0%</b><br>             📍 Type: land<br>             📏 Distance: 15.0 km<br>             📡 Data: Real-time             </div>`)[0];
+                popup_bab630d8100027f66d6fe292cb38582a.setContent(html_794236a355e7beddbf2be0f20229ef56);
+            
+        
+
+        marker_41572862f282099ebe776c699bdff8cd.bindPopup(popup_bab630d8100027f66d6fe292cb38582a)
+        ;
+
+        
+    
+    
+            marker_41572862f282099ebe776c699bdff8cd.bindTooltip(
+                `<div>
+                     0.0% - South Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41572862f282099ebe776c699bdff8cd.setIcon(icon_20de24ab8ee985a4d71bec867faee236);
+            
+    
+            var marker_d4a242f6b937d03138885d7dfc2ead80 = L.marker(
+                [12.458, 76.12045931353349],
+                {
+}
+            ).addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var icon_4232bb45083477bfddb1b460ef8d0011 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "times-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0b03be3474d150e29a8bc055fe96e07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ac29d6a508fe219978655352a3f80de = $(`<div id="html_1ac29d6a508fe219978655352a3f80de" style="width: 100.0%; height: 100.0%;">             <b>East Zone</b><br>             🎯 <b>AI Safety Score: 0.0%</b><br>             📍 Type: land<br>             📏 Distance: 17.5 km<br>             📡 Data: Real-time             </div>`)[0];
+                popup_c0b03be3474d150e29a8bc055fe96e07.setContent(html_1ac29d6a508fe219978655352a3f80de);
+            
+        
+
+        marker_d4a242f6b937d03138885d7dfc2ead80.bindPopup(popup_c0b03be3474d150e29a8bc055fe96e07)
+        ;
+
+        
+    
+    
+            marker_d4a242f6b937d03138885d7dfc2ead80.bindTooltip(
+                `<div>
+                     0.0% - East Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4a242f6b937d03138885d7dfc2ead80.setIcon(icon_4232bb45083477bfddb1b460ef8d0011);
+            
+    
+            var marker_a3e3314843c608a6abf9e040f6d57338 = L.marker(
+                [12.458, 75.84367191890466],
+                {
+}
+            ).addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var icon_432df94e0927156154ec75cdf8e3054b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "times-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2373b34c29648ba6d4c2b13729a2a2ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c21e6eda16e5e3e23fdb0e31592e5392 = $(`<div id="html_c21e6eda16e5e3e23fdb0e31592e5392" style="width: 100.0%; height: 100.0%;">             <b>West Zone</b><br>             🎯 <b>AI Safety Score: 0.0%</b><br>             📍 Type: land<br>             📏 Distance: 12.5 km<br>             📡 Data: Real-time             </div>`)[0];
+                popup_2373b34c29648ba6d4c2b13729a2a2ab.setContent(html_c21e6eda16e5e3e23fdb0e31592e5392);
+            
+        
+
+        marker_a3e3314843c608a6abf9e040f6d57338.bindPopup(popup_2373b34c29648ba6d4c2b13729a2a2ab)
+        ;
+
+        
+    
+    
+            marker_a3e3314843c608a6abf9e040f6d57338.bindTooltip(
+                `<div>
+                     0.0% - West Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a3e3314843c608a6abf9e040f6d57338.setIcon(icon_432df94e0927156154ec75cdf8e3054b);
+            
+    
+            var marker_9791d6cdab42639314ec6f886c40ad5d = L.marker(
+                [12.54809009009009, 76.0281968486572],
+                {
+}
+            ).addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var icon_19e1509831de2ff5ef1dcaa1ec286c3d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "times-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e2142201c58ae138951ec47f6d6cbe6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0e5420d5e25a6731ddfd40b3070f872 = $(`<div id="html_e0e5420d5e25a6731ddfd40b3070f872" style="width: 100.0%; height: 100.0%;">             <b>Northeast Zone</b><br>             🎯 <b>AI Safety Score: 0.0%</b><br>             📍 Type: land<br>             📏 Distance: 12.5 km<br>             📡 Data: Real-time             </div>`)[0];
+                popup_2e2142201c58ae138951ec47f6d6cbe6.setContent(html_e0e5420d5e25a6731ddfd40b3070f872);
+            
+        
+
+        marker_9791d6cdab42639314ec6f886c40ad5d.bindPopup(popup_2e2142201c58ae138951ec47f6d6cbe6)
+        ;
+
+        
+    
+    
+            marker_9791d6cdab42639314ec6f886c40ad5d.bindTooltip(
+                `<div>
+                     0.0% - Northeast Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9791d6cdab42639314ec6f886c40ad5d.setIcon(icon_19e1509831de2ff5ef1dcaa1ec286c3d);
+            
+    
+            var marker_2c9782fd1e2d18cec80b40c18ce2522b = L.marker(
+                [12.390432432432432, 75.86673753512373],
+                {
+}
+            ).addTo(map_162911b34b0576ac328e77ea8239bdf3);
+        
+    
+            var icon_1f4e5c1d8ad39753c54ed219c31d070c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "times-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36ded15d727111ee0b1dc1c470e79512 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84746f4607345d233df0f222d99c0fd9 = $(`<div id="html_84746f4607345d233df0f222d99c0fd9" style="width: 100.0%; height: 100.0%;">             <b>Southwest Zone</b><br>             🎯 <b>AI Safety Score: 0.0%</b><br>             📍 Type: land<br>             📏 Distance: 12.5 km<br>             📡 Data: Real-time             </div>`)[0];
+                popup_36ded15d727111ee0b1dc1c470e79512.setContent(html_84746f4607345d233df0f222d99c0fd9);
+            
+        
+
+        marker_2c9782fd1e2d18cec80b40c18ce2522b.bindPopup(popup_36ded15d727111ee0b1dc1c470e79512)
+        ;
+
+        
+    
+    
+            marker_2c9782fd1e2d18cec80b40c18ce2522b.bindTooltip(
+                `<div>
+                     0.0% - Southwest Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2c9782fd1e2d18cec80b40c18ce2522b.setIcon(icon_1f4e5c1d8ad39753c54ed219c31d070c);
+            
+</script>
+</html>

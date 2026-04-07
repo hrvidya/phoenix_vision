@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d8524aa567b6b7baee19c9819b9aacac {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d8524aa567b6b7baee19c9819b9aacac" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d8524aa567b6b7baee19c9819b9aacac = L.map(
+                "map_d8524aa567b6b7baee19c9819b9aacac",
+                {
+                    center: [12.9, 80.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b74c7a5ec6f1f2ab8a1d86a5c65cb5a0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b74c7a5ec6f1f2ab8a1d86a5c65cb5a0.addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var marker_9713064f78a20cdfced6cf4b3dde83dc = L.marker(
+                [12.9, 80.2],
+                {
+}
+            ).addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var icon_9c6267a9d7822a812b27a89bf6b33744 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b29fe712f2e2744b80c51cffebea0ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5194dfcfe1f83e5760a33d6749f388d9 = $(`<div id="html_5194dfcfe1f83e5760a33d6749f388d9" style="width: 100.0%; height: 100.0%;">Aircraft Position<br>Altitude: 6000 ft</div>`)[0];
+                popup_0b29fe712f2e2744b80c51cffebea0ea.setContent(html_5194dfcfe1f83e5760a33d6749f388d9);
+            
+        
+
+        marker_9713064f78a20cdfced6cf4b3dde83dc.bindPopup(popup_0b29fe712f2e2744b80c51cffebea0ea)
+        ;
+
+        
+    
+    
+                marker_9713064f78a20cdfced6cf4b3dde83dc.setIcon(icon_9c6267a9d7822a812b27a89bf6b33744);
+            
+    
+            var marker_8908c105a14e6504d1c22ff6724b8ad9 = L.marker(
+                [12.9941, 80.1709],
+                {
+}
+            ).addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var icon_eefaf115b231e6fb3b9d53bc5822eb25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05af837fc4a271904a17c5af1f3ec417 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b620133bf1de70c335465042c5f4701c = $(`<div id="html_b620133bf1de70c335465042c5f4701c" style="width: 100.0%; height: 100.0%;"><b>VOMM</b><br>Chennai Intl Airport<br>5.9 NM<br>Bearing 343.2°</div>`)[0];
+                popup_05af837fc4a271904a17c5af1f3ec417.setContent(html_b620133bf1de70c335465042c5f4701c);
+            
+        
+
+        marker_8908c105a14e6504d1c22ff6724b8ad9.bindPopup(popup_05af837fc4a271904a17c5af1f3ec417)
+        ;
+
+        
+    
+    
+                marker_8908c105a14e6504d1c22ff6724b8ad9.setIcon(icon_eefaf115b231e6fb3b9d53bc5822eb25);
+            
+    
+            var poly_line_79645e8a0b54a3ed5d7c6097489d85b4 = L.polyline(
+                [[12.9, 80.2], [12.9941, 80.1709]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var marker_e6d0789a96e63417706cf977d3bd6750 = L.marker(
+                [13.0486, 80.209],
+                {
+}
+            ).addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var icon_5988aad8fe79350cbd8baa18f9eaeeb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db97e74a0f8a9a08bac44172492bf0cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9fb81ddc7707923f8a182796933761a1 = $(`<div id="html_9fb81ddc7707923f8a182796933761a1" style="width: 100.0%; height: 100.0%;">VOHS (Unreachable)</div>`)[0];
+                popup_db97e74a0f8a9a08bac44172492bf0cb.setContent(html_9fb81ddc7707923f8a182796933761a1);
+            
+        
+
+        marker_e6d0789a96e63417706cf977d3bd6750.bindPopup(popup_db97e74a0f8a9a08bac44172492bf0cb)
+        ;
+
+        
+    
+    
+                marker_e6d0789a96e63417706cf977d3bd6750.setIcon(icon_5988aad8fe79350cbd8baa18f9eaeeb5);
+            
+    
+            var marker_99440a66b484ea0684c307e97252fa0e = L.marker(
+                [11.641, 78.179],
+                {
+}
+            ).addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var icon_8e3e68c39fa3d358cac915a1d7f9572b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_484317e108af8498b45e036f8befd840 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f42178c4c01f86cc18bb00883e06985 = $(`<div id="html_2f42178c4c01f86cc18bb00883e06985" style="width: 100.0%; height: 100.0%;">VOPC (Unreachable)</div>`)[0];
+                popup_484317e108af8498b45e036f8befd840.setContent(html_2f42178c4c01f86cc18bb00883e06985);
+            
+        
+
+        marker_99440a66b484ea0684c307e97252fa0e.bindPopup(popup_484317e108af8498b45e036f8befd840)
+        ;
+
+        
+    
+    
+                marker_99440a66b484ea0684c307e97252fa0e.setIcon(icon_8e3e68c39fa3d358cac915a1d7f9572b);
+            
+    
+            var poly_line_409a56821f59628d709009d83642ffdb = L.polyline(
+                [[12.9, 80.2], [12.9941, 80.1709]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var marker_702c04b14b162c58cbb64da88f019f6d = L.marker(
+                [12.9941, 80.1709],
+                {
+}
+            ).addTo(map_d8524aa567b6b7baee19c9819b9aacac);
+        
+    
+            var icon_c4f5fe6b008d2a1b5a0aed44c05ea9b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "check",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cabe1398026a1bf8ca915de920f33279 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80f36103dec4db415b281c50eda5337e = $(`<div id="html_80f36103dec4db415b281c50eda5337e" style="width: 100.0%; height: 100.0%;">🏁 Best Landing Site<br>VOMM<br>Chennai Intl Airport</div>`)[0];
+                popup_cabe1398026a1bf8ca915de920f33279.setContent(html_80f36103dec4db415b281c50eda5337e);
+            
+        
+
+        marker_702c04b14b162c58cbb64da88f019f6d.bindPopup(popup_cabe1398026a1bf8ca915de920f33279)
+        ;
+
+        
+    
+    
+                marker_702c04b14b162c58cbb64da88f019f6d.setIcon(icon_c4f5fe6b008d2a1b5a0aed44c05ea9b3);
+            
+</script>
+</html>

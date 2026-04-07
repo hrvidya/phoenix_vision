@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0b9332fa5a3b5e2449c1890964aef154 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0b9332fa5a3b5e2449c1890964aef154" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0b9332fa5a3b5e2449c1890964aef154 = L.map(
+                "map_0b9332fa5a3b5e2449c1890964aef154",
+                {
+                    center: [12.9716, 77.5946],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0ffeaea29bc7f0e9d76eb03c1b904d1e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0ffeaea29bc7f0e9d76eb03c1b904d1e.addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_ed20e57994db3e6b174d847c4493fb47 = L.marker(
+                [12.9716, 77.5946],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_b14ba38946cc7b4dfa216fd9e89474a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27fcd509a1458787967ca1a1903179b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe820c4250b4f29cf6b20498b424fde8 = $(`<div id="html_fe820c4250b4f29cf6b20498b424fde8" style="width: 100.0%; height: 100.0%;">Aircraft<br>Alt: 3000 ft</div>`)[0];
+                popup_27fcd509a1458787967ca1a1903179b6.setContent(html_fe820c4250b4f29cf6b20498b424fde8);
+            
+        
+
+        marker_ed20e57994db3e6b174d847c4493fb47.bindPopup(popup_27fcd509a1458787967ca1a1903179b6)
+        ;
+
+        
+    
+    
+                marker_ed20e57994db3e6b174d847c4493fb47.setIcon(icon_b14ba38946cc7b4dfa216fd9e89474a4);
+            
+    
+            var marker_22fb6345b0a5f7ea068f0193799f8641 = L.marker(
+                [13.1986, 77.7066],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_e7ff11a38df1d1c2c0dd09b1f78bf9bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_95f0634dfe7a4a568c2bdd99cb79188a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a877b3dfc0ab2c4fcda8ed9b3ab4fc9e = $(`<div id="html_a877b3dfc0ab2c4fcda8ed9b3ab4fc9e" style="width: 100.0%; height: 100.0%;"><b>VOBL</b> - Kempegowda International Airport<br>Score: 37.3<br>Dist: 15.1 NM<br>Runway: 12000 ft<br>Wind: 3.2 m/s<br>Bearing: 25.7°</div>`)[0];
+                popup_95f0634dfe7a4a568c2bdd99cb79188a.setContent(html_a877b3dfc0ab2c4fcda8ed9b3ab4fc9e);
+            
+        
+
+        marker_22fb6345b0a5f7ea068f0193799f8641.bindPopup(popup_95f0634dfe7a4a568c2bdd99cb79188a)
+        ;
+
+        
+    
+    
+                marker_22fb6345b0a5f7ea068f0193799f8641.setIcon(icon_e7ff11a38df1d1c2c0dd09b1f78bf9bb);
+            
+    
+            var poly_line_a52c05f1f7a1d4a80b0f817978f4318e = L.polyline(
+                [[12.9716, 77.5946], [13.1986, 77.7066]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_93e9fc567b2764c4703c765322b94fea = L.marker(
+                [12.9498, 77.6682],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_606070218e933292e6fac05e3633065b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06345386d2e1beee6ca5743e10d9d239 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41fbdebf85c506d40e1126b92d352830 = $(`<div id="html_41fbdebf85c506d40e1126b92d352830" style="width: 100.0%; height: 100.0%;"><b>VOBG</b> - Hindustan Aeronautics Airport<br>Score: 33.2<br>Dist: 4.5 NM<br>Runway: 6000 ft<br>Wind: 3.2 m/s<br>Bearing: 106.9°</div>`)[0];
+                popup_06345386d2e1beee6ca5743e10d9d239.setContent(html_41fbdebf85c506d40e1126b92d352830);
+            
+        
+
+        marker_93e9fc567b2764c4703c765322b94fea.bindPopup(popup_06345386d2e1beee6ca5743e10d9d239)
+        ;
+
+        
+    
+    
+                marker_93e9fc567b2764c4703c765322b94fea.setIcon(icon_606070218e933292e6fac05e3633065b);
+            
+    
+            var poly_line_9ab7b2047802734cd02b9b6a4b803ce8 = L.polyline(
+                [[12.9716, 77.5946], [12.9498, 77.6682]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_4782dc3858d427ba2c93d4b185813560 = L.marker(
+                [17.2313, 78.4294],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_12f9e50ed2a64e5e0beb4520b7d6c660 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33b4f6625f3a982e29ac37a8f906ebc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0de86d25ebe747aaa986f279d95cb596 = $(`<div id="html_0de86d25ebe747aaa986f279d95cb596" style="width: 100.0%; height: 100.0%;"><b>VOHS</b> - Rajiv Gandhi International Airport<br>Score: 20.0<br>Dist: 260.3 NM<br>Runway: 10800 ft<br>Wind: 3.2 m/s<br>Bearing: 10.6°</div>`)[0];
+                popup_33b4f6625f3a982e29ac37a8f906ebc4.setContent(html_0de86d25ebe747aaa986f279d95cb596);
+            
+        
+
+        marker_4782dc3858d427ba2c93d4b185813560.bindPopup(popup_33b4f6625f3a982e29ac37a8f906ebc4)
+        ;
+
+        
+    
+    
+                marker_4782dc3858d427ba2c93d4b185813560.setIcon(icon_12f9e50ed2a64e5e0beb4520b7d6c660);
+            
+    
+            var poly_line_739cf6d5ce461653d1f93e40452d9534 = L.polyline(
+                [[12.9716, 77.5946], [17.2313, 78.4294]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_b2e6e7c57e70b8fcffe8b1a70650d28e = L.marker(
+                [12.9944, 80.18],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_3ba705fbfb33def9db6a9a999cf92689 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a130acf8ac2100fb8394e8015952f1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef81b4dfcde16e706f82cd220b40d264 = $(`<div id="html_ef81b4dfcde16e706f82cd220b40d264" style="width: 100.0%; height: 100.0%;"><b>VOMM</b> - Chennai International Airport<br>Score: 20.0<br>Dist: 151.3 NM<br>Runway: 12000 ft<br>Wind: 3.2 m/s<br>Bearing: 89.2°</div>`)[0];
+                popup_9a130acf8ac2100fb8394e8015952f1b.setContent(html_ef81b4dfcde16e706f82cd220b40d264);
+            
+        
+
+        marker_b2e6e7c57e70b8fcffe8b1a70650d28e.bindPopup(popup_9a130acf8ac2100fb8394e8015952f1b)
+        ;
+
+        
+    
+    
+                marker_b2e6e7c57e70b8fcffe8b1a70650d28e.setIcon(icon_3ba705fbfb33def9db6a9a999cf92689);
+            
+    
+            var poly_line_e7ec57c913afb112bc961d6d3a2233b7 = L.polyline(
+                [[12.9716, 77.5946], [12.9944, 80.18]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_f7512c5c0d09a1302a1e3ef66a9eb93e = L.marker(
+                [12.916787403418585, 77.6058259602408],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_ac151ebca78ec0ae99e72465d8e441a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fee4d3ec16589c6f390537b1b82bf66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20d193a90c8b28511ebc4e131e56d79b = $(`<div id="html_20d193a90c8b28511ebc4e131e56d79b" style="width: 100.0%; height: 100.0%;"><b>EF1</b> - Emergency Field 1<br>Score: 4.0<br>Dist: 3.4 NM<br>Runway: 0 ft<br>Wind: 3.2 m/s<br>Bearing: 168.7°</div>`)[0];
+                popup_9fee4d3ec16589c6f390537b1b82bf66.setContent(html_20d193a90c8b28511ebc4e131e56d79b);
+            
+        
+
+        marker_f7512c5c0d09a1302a1e3ef66a9eb93e.bindPopup(popup_9fee4d3ec16589c6f390537b1b82bf66)
+        ;
+
+        
+    
+    
+                marker_f7512c5c0d09a1302a1e3ef66a9eb93e.setIcon(icon_ac151ebca78ec0ae99e72465d8e441a8);
+            
+    
+            var poly_line_cdb61ab01ea31fcda2234388dfbc890a = L.polyline(
+                [[12.9716, 77.5946], [12.916787403418585, 77.6058259602408]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_19197a3cf8ad40c402f81b08104ec573 = L.marker(
+                [13.053092568098666, 77.60793439002812],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_3c5a4b7834e6babb0687a9773ec7925f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_231877ab7d2d67eb9c8a40ca3d03f903 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a743108a8b1aad6638e9ada5b5ccfb2e = $(`<div id="html_a743108a8b1aad6638e9ada5b5ccfb2e" style="width: 100.0%; height: 100.0%;"><b>EF6</b> - Emergency Field 6<br>Score: 1.6<br>Dist: 5.0 NM<br>Runway: 0 ft<br>Wind: 3.2 m/s<br>Bearing: 9.1°</div>`)[0];
+                popup_231877ab7d2d67eb9c8a40ca3d03f903.setContent(html_a743108a8b1aad6638e9ada5b5ccfb2e);
+            
+        
+
+        marker_19197a3cf8ad40c402f81b08104ec573.bindPopup(popup_231877ab7d2d67eb9c8a40ca3d03f903)
+        ;
+
+        
+    
+    
+                marker_19197a3cf8ad40c402f81b08104ec573.setIcon(icon_3c5a4b7834e6babb0687a9773ec7925f);
+            
+    
+            var poly_line_5c3d7f8d2418f918edda7f0dd3e05313 = L.polyline(
+                [[12.9716, 77.5946], [13.053092568098666, 77.60793439002812]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_4ec33fb5f7dc6e5fd76a0a2dbe601e02 = L.marker(
+                [16.5304, 80.7968],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_17234daa264ae6e4da208515253b1b21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_554f81f002ec513fcd96b30bb2f928f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4390ec81fe70220b533382ed125ab518 = $(`<div id="html_4390ec81fe70220b533382ed125ab518" style="width: 100.0%; height: 100.0%;"><b>VOBZ</b> - Vijayawada Airport<br>Score: 0.0<br>Dist: 283.2 NM<br>Runway: 5600 ft<br>Wind: 3.2 m/s<br>Bearing: 40.6°</div>`)[0];
+                popup_554f81f002ec513fcd96b30bb2f928f3.setContent(html_4390ec81fe70220b533382ed125ab518);
+            
+        
+
+        marker_4ec33fb5f7dc6e5fd76a0a2dbe601e02.bindPopup(popup_554f81f002ec513fcd96b30bb2f928f3)
+        ;
+
+        
+    
+    
+                marker_4ec33fb5f7dc6e5fd76a0a2dbe601e02.setIcon(icon_17234daa264ae6e4da208515253b1b21);
+            
+    
+            var poly_line_c44e452becd809ce913047f8c7b9ec5d = L.polyline(
+                [[12.9716, 77.5946], [16.5304, 80.7968]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_471f7b10e0620ba5f5dfe965591d1d6d = L.marker(
+                [12.759019955674894, 77.5765428365485],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_20ae6bd8dad755efe75bcc5fd7617621 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49c39cefc6dcad79a9e9fab4dd775f68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8793437075aa3421d53c5a920e16d275 = $(`<div id="html_8793437075aa3421d53c5a920e16d275" style="width: 100.0%; height: 100.0%;"><b>EF2</b> - Emergency Field 2<br>Score: 0.0<br>Dist: 12.8 NM<br>Runway: 0 ft<br>Wind: 3.2 m/s<br>Bearing: 184.7°</div>`)[0];
+                popup_49c39cefc6dcad79a9e9fab4dd775f68.setContent(html_8793437075aa3421d53c5a920e16d275);
+            
+        
+
+        marker_471f7b10e0620ba5f5dfe965591d1d6d.bindPopup(popup_49c39cefc6dcad79a9e9fab4dd775f68)
+        ;
+
+        
+    
+    
+                marker_471f7b10e0620ba5f5dfe965591d1d6d.setIcon(icon_20ae6bd8dad755efe75bcc5fd7617621);
+            
+    
+            var poly_line_61a1f236cb5aeee3571b7d97ed6f46b2 = L.polyline(
+                [[12.9716, 77.5946], [12.759019955674894, 77.5765428365485]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_16504289ee096369b37daff839f6e9e3 = L.marker(
+                [13.025178722959103, 77.48494132892958],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_7f64954a20e73b4410ca01f3bcc68cc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b99e05a3273716d8efbc4744dd06e853 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6728364cdeca5e905a33df333a2d36e7 = $(`<div id="html_6728364cdeca5e905a33df333a2d36e7" style="width: 100.0%; height: 100.0%;"><b>EF3</b> - Emergency Field 3<br>Score: 0.0<br>Dist: 7.2 NM<br>Runway: 0 ft<br>Wind: 3.2 m/s<br>Bearing: 296.6°</div>`)[0];
+                popup_b99e05a3273716d8efbc4744dd06e853.setContent(html_6728364cdeca5e905a33df333a2d36e7);
+            
+        
+
+        marker_16504289ee096369b37daff839f6e9e3.bindPopup(popup_b99e05a3273716d8efbc4744dd06e853)
+        ;
+
+        
+    
+    
+                marker_16504289ee096369b37daff839f6e9e3.setIcon(icon_7f64954a20e73b4410ca01f3bcc68cc0);
+            
+    
+            var poly_line_093cce19201ef152b28affea65abdd11 = L.polyline(
+                [[12.9716, 77.5946], [13.025178722959103, 77.48494132892958]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_0304cced4ca626de1fa1b57e3ed75369 = L.marker(
+                [12.896940898143878, 77.49231893391666],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_80610ff49e220d542919b96807786220 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad41095e54138c2cf1eaad89934801a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63cd9981f0c097f02930d919e4c3046b = $(`<div id="html_63cd9981f0c097f02930d919e4c3046b" style="width: 100.0%; height: 100.0%;"><b>EF4</b> - Emergency Field 4<br>Score: 0.0<br>Dist: 7.5 NM<br>Runway: 0 ft<br>Wind: 3.2 m/s<br>Bearing: 233.2°</div>`)[0];
+                popup_ad41095e54138c2cf1eaad89934801a4.setContent(html_63cd9981f0c097f02930d919e4c3046b);
+            
+        
+
+        marker_0304cced4ca626de1fa1b57e3ed75369.bindPopup(popup_ad41095e54138c2cf1eaad89934801a4)
+        ;
+
+        
+    
+    
+                marker_0304cced4ca626de1fa1b57e3ed75369.setIcon(icon_80610ff49e220d542919b96807786220);
+            
+    
+            var poly_line_534677d872f4f57c0f2bad98c89d5d2f = L.polyline(
+                [[12.9716, 77.5946], [12.896940898143878, 77.49231893391666]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_1a6d32ed784cd7d58bbd0b25d15bb007 = L.marker(
+                [12.846639658831492, 77.49468924551233],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_f2c385fb206b54e01181cd44db479de2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d609f3daa8ed8abf8a8e792343c9b32c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_391065513d620495759b8d466e85bd5d = $(`<div id="html_391065513d620495759b8d466e85bd5d" style="width: 100.0%; height: 100.0%;"><b>EF5</b> - Emergency Field 5<br>Score: 0.0<br>Dist: 9.5 NM<br>Runway: 0 ft<br>Wind: 3.2 m/s<br>Bearing: 217.9°</div>`)[0];
+                popup_d609f3daa8ed8abf8a8e792343c9b32c.setContent(html_391065513d620495759b8d466e85bd5d);
+            
+        
+
+        marker_1a6d32ed784cd7d58bbd0b25d15bb007.bindPopup(popup_d609f3daa8ed8abf8a8e792343c9b32c)
+        ;
+
+        
+    
+    
+                marker_1a6d32ed784cd7d58bbd0b25d15bb007.setIcon(icon_f2c385fb206b54e01181cd44db479de2);
+            
+    
+            var poly_line_6c7cf845657797587994d336081077fa = L.polyline(
+                [[12.9716, 77.5946], [12.846639658831492, 77.49468924551233]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var marker_584eec430d447f171cc26fe695f6e1b8 = L.marker(
+                [12.916787403418585, 77.6058259602408],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_08a4801de460697f4d0ca95f4aee70e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0bdbb180fab4dde7a3fb212b3efd98ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0347f391a23c77481b9129a0d9bd3cf8 = $(`<div id="html_0347f391a23c77481b9129a0d9bd3cf8" style="width: 100.0%; height: 100.0%;">EF1 - Emergency Field 1</div>`)[0];
+                popup_0bdbb180fab4dde7a3fb212b3efd98ec.setContent(html_0347f391a23c77481b9129a0d9bd3cf8);
+            
+        
+
+        marker_584eec430d447f171cc26fe695f6e1b8.bindPopup(popup_0bdbb180fab4dde7a3fb212b3efd98ec)
+        ;
+
+        
+    
+    
+                marker_584eec430d447f171cc26fe695f6e1b8.setIcon(icon_08a4801de460697f4d0ca95f4aee70e8);
+            
+    
+            var marker_fa67a64e88a7a7f10a18d06fdf764e12 = L.marker(
+                [12.759019955674894, 77.5765428365485],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_651d941afa1cd2aed74e6f1e8809742d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2847bf3655787288458bb774448ce16f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3bd02d341ebddbd2a4056646d904ede = $(`<div id="html_d3bd02d341ebddbd2a4056646d904ede" style="width: 100.0%; height: 100.0%;">EF2 - Emergency Field 2</div>`)[0];
+                popup_2847bf3655787288458bb774448ce16f.setContent(html_d3bd02d341ebddbd2a4056646d904ede);
+            
+        
+
+        marker_fa67a64e88a7a7f10a18d06fdf764e12.bindPopup(popup_2847bf3655787288458bb774448ce16f)
+        ;
+
+        
+    
+    
+                marker_fa67a64e88a7a7f10a18d06fdf764e12.setIcon(icon_651d941afa1cd2aed74e6f1e8809742d);
+            
+    
+            var marker_ec61da2c5ea29b41de577e5282b76738 = L.marker(
+                [13.025178722959103, 77.48494132892958],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_c2ded1cc6f44f77bfe23307e223882e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0361b827197101d750c3094ef460c89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2620c5386ca85fc8580613be2ec81441 = $(`<div id="html_2620c5386ca85fc8580613be2ec81441" style="width: 100.0%; height: 100.0%;">EF3 - Emergency Field 3</div>`)[0];
+                popup_a0361b827197101d750c3094ef460c89.setContent(html_2620c5386ca85fc8580613be2ec81441);
+            
+        
+
+        marker_ec61da2c5ea29b41de577e5282b76738.bindPopup(popup_a0361b827197101d750c3094ef460c89)
+        ;
+
+        
+    
+    
+                marker_ec61da2c5ea29b41de577e5282b76738.setIcon(icon_c2ded1cc6f44f77bfe23307e223882e8);
+            
+    
+            var marker_e9ade3937265a254da7e78f794c7498d = L.marker(
+                [12.896940898143878, 77.49231893391666],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_e8a6c27f13dbe10e22c22c9d25c21179 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32b6667aeaca080735d11ddff0f3b9db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b3798136ad8848a9143249ed8a9cef2 = $(`<div id="html_7b3798136ad8848a9143249ed8a9cef2" style="width: 100.0%; height: 100.0%;">EF4 - Emergency Field 4</div>`)[0];
+                popup_32b6667aeaca080735d11ddff0f3b9db.setContent(html_7b3798136ad8848a9143249ed8a9cef2);
+            
+        
+
+        marker_e9ade3937265a254da7e78f794c7498d.bindPopup(popup_32b6667aeaca080735d11ddff0f3b9db)
+        ;
+
+        
+    
+    
+                marker_e9ade3937265a254da7e78f794c7498d.setIcon(icon_e8a6c27f13dbe10e22c22c9d25c21179);
+            
+    
+            var marker_f146c1ff7636d03f5c017dd97ce7d588 = L.marker(
+                [12.846639658831492, 77.49468924551233],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_1c2a2e096f6b8c1987cfd8e880ef640b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80a1209ed848eb95db4dde8c576f34ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0663e496c9a88a6247a710ff6ca9e93 = $(`<div id="html_e0663e496c9a88a6247a710ff6ca9e93" style="width: 100.0%; height: 100.0%;">EF5 - Emergency Field 5</div>`)[0];
+                popup_80a1209ed848eb95db4dde8c576f34ef.setContent(html_e0663e496c9a88a6247a710ff6ca9e93);
+            
+        
+
+        marker_f146c1ff7636d03f5c017dd97ce7d588.bindPopup(popup_80a1209ed848eb95db4dde8c576f34ef)
+        ;
+
+        
+    
+    
+                marker_f146c1ff7636d03f5c017dd97ce7d588.setIcon(icon_1c2a2e096f6b8c1987cfd8e880ef640b);
+            
+    
+            var marker_32de6de4fb67b183deb290e1316ec325 = L.marker(
+                [13.053092568098666, 77.60793439002812],
+                {
+}
+            ).addTo(map_0b9332fa5a3b5e2449c1890964aef154);
+        
+    
+            var icon_484dd4a54e0798099a014f8661000cba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_512f590dd70bd34ff1ea6727da232efe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62d3a6729e5ea5b370a6e149552dbbd8 = $(`<div id="html_62d3a6729e5ea5b370a6e149552dbbd8" style="width: 100.0%; height: 100.0%;">EF6 - Emergency Field 6</div>`)[0];
+                popup_512f590dd70bd34ff1ea6727da232efe.setContent(html_62d3a6729e5ea5b370a6e149552dbbd8);
+            
+        
+
+        marker_32de6de4fb67b183deb290e1316ec325.bindPopup(popup_512f590dd70bd34ff1ea6727da232efe)
+        ;
+
+        
+    
+    
+                marker_32de6de4fb67b183deb290e1316ec325.setIcon(icon_484dd4a54e0798099a014f8661000cba);
+            
+</script>
+</html>
